@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>24</title>
+<script>
+//testing
+// try to find all combinations of numbers that don't have solutions
+// valid numbers are 1-max, no repeats
+// currently only two cases fail to find a solution with max at 9:
+//  1 6 7 8
+//  3 4 6 7   - (3*7)+(6/sqrt(4))
+function test(max)
+{
+	var x=0;y=0;z=0;w=0;
+	for (x=1;x<(max-2);x++)
+	{
+		for(y=x+1;y<(max-2);y++)
+		{
+			for(z=y+1;z<max;z++)
+			{
+				for(w=z+1;w<(max+1);w++)
+				{
+					result = calc24(x,y,z,w);
+					if (result.length < 1)
+						document.write(x+' '+y+' '+z+' '+w+'<br>\n');
+				}
+			}
+		}
+	}
+	document.write('done');
+}
+
+</script>
+</head>
+<body>
+<h4>Press the 'test' button to find numbers without solutions</h4>
+<input type='button' value='test' onClick="test(9)"/><br><br>
+</body>
+</html>

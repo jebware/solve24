@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>24</title>
+<script>
+function demoRun()
+{
+	input1=document.getElementById('input1');
+	input2=document.getElementById('input2');
+	input3=document.getElementById('input3');
+	input4=document.getElementById('input4');
+	document.getElementById('output1').value=
+		calc24(input1.value,input2.value,input3.value,input4.value);
+}
+</script>
+<script src="solve24.js"></script>
+</head>
+<body>
+<h4>Enter the 4 numbers to calculate</h4>
+<form action='#'>
+<input type='text' name='1' id='input1' size=1 value='1' />
+<input type='text' name='2' id='input2' size=1 value='2' />
+<input type='text' name='3' id='input3' size=1 value='3' />
+<input type='text' name='4' id='input4' size=1 value='4' /><br>
+<input type='button' value='submit' onClick="demoRun()"/><br><br>
+Result: <textarea rows=10 cols=50 id='output1' ></textarea>
+</form>
+</body>
+</html>
